@@ -1,0 +1,14 @@
+﻿@model Krouzek_MS.Models.AktualityLes
+
+@{
+    ViewData["Title"] = "Odstranění";
+}
+
+<section id="centrovac">
+    <p>Opravdu chcete článek <b>@Model.Title</b> vymazat?</p>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="clanky-tlacitko">Odstranit</button>
+        <a class="clanky-tlacitko" asp-action="Index">Zpět na seznam článků</a>
+    </form>
+</section>

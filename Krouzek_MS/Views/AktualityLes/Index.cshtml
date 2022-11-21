@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Krouzek_MS.Models.AktualityLes>
+
+<section id="centrovac">
+    @if (User.IsInRole("admin"))
+    {
+        <p>
+            <a class="clanky-tlacitko" asp-action="Create">Vytvořit nový</a>
+        </p>
+    }
+    <ul class="list-group" id="clanky">
+        @foreach (var item in Model)
+        {
+            <li class="list-group-item">
+                <h2 class="titulek"><a asp-action="Details" asp-route-id="@item.Id">@item.Title</a></h2>
+                <p>@item.Description</p>
+
+                @if (User.IsInRole("admin"))
+                {
+                    <p>
+                        <a class="clanky-tlacitko" asp-action="Edit" asp-route-id="@item.Id">Editovat</a> |
+                        <a class="clanky-tlacitko" asp-action="Delete" asp-route-id="@item.Id">Odstranit</a>
+                    </p>
+                }
+            </li>
+        }
+    </ul>
+</section>

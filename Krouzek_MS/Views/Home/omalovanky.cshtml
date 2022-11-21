@@ -1,0 +1,46 @@
+﻿
+@{
+}
+<head>
+    
+    <link rel="stylesheet" href="~/css/styleKresleni.css" asp-append-version="true" />
+
+</head>
+
+<div class="kresleni">
+    <div id="canvas-container">
+        <canvas id="canvas-img"></canvas>
+        <canvas id="canvas"></canvas>
+    </div>
+
+
+    <div class="tools">
+
+        <div onClick="change_color(this)" class="color-field" style="background: red;"></div>
+        <div onClick="change_color(this)" class="color-field" style="background: rgb(87, 43, 6);"></div>
+        <div onClick="change_color(this)" class="color-field" style="background: orange;"></div>
+        <div onClick="change_color(this)" class="color-field" style="background: yellow;"></div>
+        <div onClick="change_color(this)" class="color-field" style="background: greenyellow;"></div>
+        <div onClick="change_color(this)" class="color-field" style="background: green;"></div>
+        <div onClick="change_color(this)" class="color-field" style="background: blue;"></div>
+        <div onClick="change_color(this)" class="color-field" style="background: rgb(113, 171, 247);"></div>
+        <div onClick="change_color(this)" class="color-field" style="background: darkmagenta;"></div>
+        <div onClick="change_color(this)" class="color-field" style="background: black;"></div>
+        <div onClick="change_color(this)" class="color-field" style="background: white;"></div>
+
+
+    </div>
+    <div class="tlacitka">
+        <button onClick="clear_canvas()" type="button" class="buttons">Vymazat</button>
+
+        <input onInput="draw_width = this.value" type="range" min="1" max="100" class="pen_range">
+    </div>
+    <div class="obrazky">
+        <img id="kralik" onClick="kralik()" class="obrazek" src="~/images/kralik.png" height="120px">
+        <img id="liska" onClick="liska()" class="obrazek" src="~/images/liskaO.png" height="120px">
+        <img id="sova" onClick="sova()" class="obrazek" src="~/images/sova.png" height="120px">
+        <img id="zaba" onClick="zaba()" class="obrazek" src="~/images/zaba.png" height="120px">
+    </div>
+</div>
+</div>
+

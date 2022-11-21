@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="autor" content="EraNumin" />
+    <title>@ViewData["Title"]</title>
+    <link rel="shortcut icon" href="~/images/logo-ikonka.ico" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+</head>
+<body>
+    <header>
+        <div>
+        <a asp-controller="Account" asp-action="Login">Přihlášení</a>
+        <a asp-controller="Account" asp-action="Logout">Odhlášení</a>
+        </div>
+        <div id="logo"><h1>Myslivecký kroužek Bystřec</h1></div>
+        <nav>
+            <div>
+                <ul>
+                    <li>
+                        <a asp-controller="Home" asp-action="Index">Úvod</a>
+                    </li>
+                    <li>
+                        <a asp-controller="Articles" asp-action="Index">Aktuality</a>
+                    </li>
+                    <li>
+                        <a asp-controller="AktualityLes" asp-action="Index">Co se děje v lese</a>
+                    </li>
+                    <li>
+                        <a asp-controller="Home" asp-action="Fotogalerie">Fotogalerie</a>
+                    </li>
+                    <li>
+                        <a asp-controller="Home" asp-action="omalovanky">Omalovánky</a>
+                    </li>
+                    <li>
+                        <a asp-controller="Home" asp-action="ONas">O nás</a>
+                    </li>
+                    <li>
+                        <a asp-controller="Home" asp-action="Kontakt">Kontakt</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+    <div>
+        <header><h1>@ViewData["Title"]</h1></header>
+
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <div class="centrPaticka">
+            Vytvořila &copy;EraNumin @DateTime.Now.Year pro <a href="https://www.ms-bystrec.cz/"><strong>Myslivecký spolek Bystřec</strong></a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/kresba.js" asp-append-version="true"></script>
+    <script src="~/lib/lightbox2/js/lightbox.min.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

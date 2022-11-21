@@ -1,0 +1,215 @@
+@font-face {
+    font-family: Fraunces;
+    src: url(../fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Nacimiento ExtraBold;
+    src: url(../fonts/Nacimiento\ ExtraBold.ttf);
+}
+
+
+body {
+    font: 17px "Fraunces";
+    background-color: #ffffea;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 100px 0px 0px 0px;
+    min-height: 100vh;
+    min-width: 960px;
+}
+
+    body > header {
+        height: 200px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        border-radius: 0 0 20px 20px;
+        background: #7aa337;
+        display: grid;
+        z-index: 5;
+    }
+
+header a {
+    text-align: right;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #686702;
+    margin: auto auto auto 6px;
+}
+
+    header a:hover {
+        color: #011005;
+    }
+
+body > header h1 {
+    font: 5em Nacimiento ExtraBold;
+}
+
+
+footer {
+    background-color: #EFEE8B;
+    height: 50px;
+    color: #014E16;
+    padding: 15px;
+    border-radius: 20px 20px 0 0;
+}
+
+    footer a {
+        color: #014E16;
+    }
+
+        footer a:hover {
+            color: #011005;
+        }
+
+.centrPaticka {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#logo {
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #014E16;
+    margin: 20px 0 0 110px;
+    background: url('../images/350px-Bystrec.png') no-repeat;
+    background-size: 100px 100px;
+}
+
+    #logo > * {
+        margin: 0 0 0 150px;
+    }
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 0 70px;
+}
+
+.aktivni {
+    background-color: #014E16;
+    color: #BADD81;
+    padding: 16px 40px;
+    margin: auto auto auto 6px;
+    font-size: 1.2em;
+    line-height: 2.5em;
+    border-radius: 5px;
+    box-shadow: 2px 1px 5px #014E16;
+}
+
+nav ul li {
+    padding: 0px 40px;
+    font-size: 1.2em;
+    line-height: 2.5em;
+    background-color: #BADD81;
+    border-radius: 5px;
+    box-shadow: 2px 1px 5px #014E16;
+}
+
+nav ul a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #686702;
+    padding: 16px 20px;
+    margin: auto auto auto 6px;
+}
+
+nav a:hover {
+    color: #011005;
+    border: 0;
+}
+
+
+/*styl omalovanek*/
+.tools .color-field {
+    height: 45px;
+    width: 45px;
+    min-height: 35px;
+    min-width: 35px;
+    cursor: pointer;
+    box-shadow: 2px 2px 3px black;
+}
+
+.obrazky {
+    padding: 0px 20px;
+    margin: auto 15px;
+    grid-row-start: 2;
+    grid-column: 3;
+}
+
+.obrazek {
+    box-shadow: -1px 1px 6px 2px #014E16;
+    background: white;
+}
+
+.buttons {
+    padding: 0px 20px;
+    margin: auto 15px;
+    font-size: 1.2em;
+    line-height: 2em;
+    background-color: #BADD81;
+    color: #686702;
+    border-radius: 5px;
+    box-shadow: 2px 1px 5px #014E16;
+}
+
+.tlacitka {
+    padding: 0px 20px;
+    margin: auto 15px;
+    grid-row-start: 1;
+    grid-column: 3;
+}
+
+.tlacitko {
+    line-height: 2em;
+    background-color: #BADD81;
+    color: #686702;
+    align-items: center;
+}
+
+.kresleni {
+    display: grid;
+
+    grid-template-rows: 150px auto;
+
+
+}
+
+    .kresleni #canvas-container {
+        grid-row-start: 1;
+        grid-row-end: -1;
+        grid-column: 2;
+        position: relative;
+    }
+
+#canvas-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+#canvas {
+    box-shadow: -3px 2px 9px 6px #014E16;
+    cursor: pointer;
+    background-color: white;
+}
+
+.tools {
+    position: relative;
+    z-index: 3;
+}
+
+.kresleni .color-field {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 50px;
+}

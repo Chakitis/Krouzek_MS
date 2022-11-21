@@ -1,0 +1,16 @@
+﻿@model Krouzek_MS.Models.Article
+
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<section id="centrovac">
+    <p>
+        @Html.Raw(Model.Content)
+    </p>
+            
+ 
+
+
+    <a class="clanky-tlacitko" asp-action="Index">Zpět na seznam článků</a>
+</section>
